@@ -102,7 +102,6 @@ def registrar_producao():
                 break
 
             elif continuar == "n":
-                print("Voltando ao menu...")
                 return
 
             else:
@@ -157,7 +156,6 @@ def registrar_estoque():
                 break
 
             elif continuar == "n":
-                print("Voltando ao menu...")
                 return
 
             else:
@@ -233,7 +231,6 @@ def registrar_residuo():
                 break
 
             elif continuar == "n":
-                print("Voltando ao menu...")
                 return
 
             else:
@@ -812,6 +809,8 @@ while True:
     print("0- Sair")
 
     opcao = input("Escolha uma opção: ")
+
+    limpar_tela()
 
     if opcao == "1":
         registrar_producao()
