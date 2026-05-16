@@ -15,6 +15,13 @@ consumo_materiais = {
     }
 }
 
+def limpar_tela():
+    os.system("cls" if os.name == "nt" else "clear")
+
+def aguardar():
+    input("Pressione <ENTER> para continuar...")
+    limpar_tela()
+
 def registrar_producao():
     while True:
         data = input("Informe a data (dd/mm/aaaa): ")
@@ -783,6 +790,7 @@ carregar_estoque_csv()
 carregar_residuos_csv()
 
 while True:
+    limpar_tela()
     print("\n--- SISTEMA ---")
     print("1- Registrar produção")
     print("2- Registrar estoque")
@@ -807,54 +815,71 @@ while True:
 
     if opcao == "1":
         registrar_producao()
+        aguardar()
 
     elif opcao == "2":
         registrar_estoque()
+        aguardar()
 
     elif opcao == "3":
         registrar_residuo()
+        aguardar()
 
     elif opcao == "4":
         listar_producao()
+        aguardar()
 
     elif opcao == "5":
         listar_estoque()
+        aguardar()
 
     elif opcao == "6":
         listar_residuos()
+        aguardar()
 
     elif opcao == "7":
         relatorio_producao()
+        aguardar()
 
     elif opcao == "8":
         relatorio_ambiental()
+        aguardar()
 
     elif opcao == "9":
         buscar_producao()
+        aguardar()
 
     elif opcao == "10":
         buscar_estoque()
+        aguardar()
 
     elif opcao == "11":
         buscar_residuos()
+        aguardar()
 
     elif opcao == "12":
         editar_producao()
+        aguardar()
 
     elif opcao == "13":
         editar_estoque()
+        aguardar()
 
     elif opcao == "14":
         editar_residuos()
+        aguardar()
 
     elif opcao == '15':
         excluir_producao()
+        aguardar()
 
     elif opcao == '16':
         excluir_estoque()
+        aguardar()
 
     elif opcao == '17':
         excluir_residuos()
+        aguardar()
 
     elif opcao == "0":
         print("Encerrando sistema...")
@@ -862,3 +887,4 @@ while True:
 
     else:
         print("Opção inválida!")
+        aguardar()
